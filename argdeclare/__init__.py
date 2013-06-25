@@ -1,1 +1,1 @@
-from argdeclare import *
+from .argdeclare import *
