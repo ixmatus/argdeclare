@@ -8,7 +8,7 @@ initially found: [argdeclare: declarative interface to argparse](http://code.act
 
 # Usage
 
-    from argdeclare import Commander, option_group, option
+    from argdeclare import Commander, option_group, option, arg
     
     def test():
         # only for options which are repeated across different funcs
@@ -28,19 +28,19 @@ initially found: [argdeclare: declarative interface to argparse](http://code.act
             @arg('pattern', help="pattern to delete")
             def do_delete(self, options):
                 "help text for delete subcmd"
-                print options
+                print(options)
     
             @option('-f', '--force', action='store_true',
                             help='force through installation')
             @common_options
             def do_install(self, options):
                 "help text for install subcmd"
-                print options
+                print(options)
     
             @common_options
             def do_uninstall(self, options):
                 "help text for uninstall subcmd"
-                print options
+                print(options)
     
         app = Application()
         app.cmdline()
