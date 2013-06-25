@@ -25,6 +25,7 @@ def option_group(*options):
 
 class MetaCommander(type):
     def __new__(cls, classname, bases, classdict):
+        classdict = dict(classdict)
         subcmds = {}
         for name, func in classdict.items():
             if name.startswith('do_'):
@@ -43,7 +44,6 @@ class MetaCommander(type):
 
 
 class Commander(object):
-    __metaclass__ = MetaCommander
     name = 'app'
     description = 'a description'
     version = '0.0'
@@ -87,3 +87,5 @@ class Commander(object):
         
         self.options = options
         options.func(self, options)
+
+Commander = MetaCommander('Commander', (object,), Commander.__dict__)

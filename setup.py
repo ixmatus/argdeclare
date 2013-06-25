@@ -3,9 +3,6 @@ from setuptools import setup, find_packages
 
 version = '0.4.6'
 
-if not '2.6' <= sys.version < '3.0':
-    raise ImportError('Python version not supported')
-
 setup(name="argdeclare",
       version=version,
       description="Implementation of the interface provided by the cmdln module but using argparse.",
