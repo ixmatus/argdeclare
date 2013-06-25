@@ -48,7 +48,7 @@ class Commander(object):
     description = 'a description'
     version = '0.0'
     epilog = ''
-    default_args = []
+    default_args = ['--help']
     
     def parse_args(self):
         parser = argparse.ArgumentParser(
