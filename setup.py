@@ -1,7 +1,7 @@
 import sys
 from distutils.core import setup
 
-version = '0.4.13'
+version = '0.4.14'
 
 with open("LICENSE", 'r') as f:
     LICENSE = f.read()
@@ -19,7 +19,5 @@ setup(name="argdeclare",
       author_email="parnell@ixmat.us",
       url="https://github.com/ixmatus/argdeclare",
       license=LICENSE,
-      zip_safe=False,
-      packages=["argdeclare"],
-      include_package_data=True
+      packages=["argdeclare"]
       )
