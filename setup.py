@@ -1,18 +1,14 @@
 import sys
-from setuptools import setup, find_packages
+from distutils.core import setup, find_packages
 
-version = '0.4.10'
+version = '0.4.12'
 
 with open("LICENSE", 'r') as f:
     LICENSE = f.read()
 
-with open("README.md", 'r') as f:
-    README = f.read()
-
 setup(name="argdeclare",
       version=version,
       description="Argdeclare is a declarative argument configurator for python's argparse.",
-      long_description=README,
       classifiers=["Intended Audience :: Developers",
                    "License :: OSI Approved :: Python Software Foundation License",
                    "Programming Language :: Python",
