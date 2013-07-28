@@ -1,11 +1,17 @@
 import sys
 from setuptools import setup, find_packages
 
-version = '0.4.7'
+version = '0.4.8'
+
+with open("LICENSE", 'r') as f:
+    LICENSE = f.read()
+
+with open("README.md", 'r') as f:
+    README = f.read()
 
 setup(name="argdeclare",
       version=version,
-      description="Implementation of the interface provided by the cmdln module but using argparse.",
+      description=README,
       classifiers=["Intended Audience :: Developers",
                    "License :: OSI Approved :: Python Software Foundation License",
                    "Programming Language :: Python",
@@ -13,9 +19,9 @@ setup(name="argdeclare",
                    "Topic :: Software Development :: Libraries :: Python Modules",
                    ],
       author="Parnell Springmeyer",
-      author_email="ixmatus@gmail.com",
-      url="http://bitbucket.org/ixmatus/argdeclare",
-      license="PSF",
+      author_email="parnell@ixmat.us",
+      url="https://github.com/ixmatus/argdeclare",
+      license=LICENSE,
       zip_safe=False,
       packages=find_packages(),
       include_package_data=True
