@@ -1,7 +1,7 @@
 import sys
 from setuptools import setup, find_packages
 
-version = '0.4.9'
+version = '0.4.10'
 
 with open("LICENSE", 'r') as f:
     LICENSE = f.read()
